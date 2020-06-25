@@ -4,7 +4,7 @@
   const output = document.querySelector('output');
   const imagecontainer = document.querySelector('#imagecontainer');
 
-  /* Show the image once we have it */
+  // Show the image once we have it 
   const loadImage = (file, name) => {
     if (name) {
       output.innerText = 'Filename: ' + name;
@@ -16,7 +16,7 @@
     };
   }
 
-  /* Image from Clipboard */
+  // Image from Clipboard 
   const getClipboardImage = (ev) => {
     let items = ev.clipboardData.items;
     for (var i = 0; i < items.length; i++) {
@@ -29,7 +29,7 @@
   }
   window.addEventListener('paste', getClipboardImage, false);
 
-  /* Image from Drag and Drop */
+  // Image from Drag and Drop
   const imageFromDrop = (e) => {
     var file = e.dataTransfer.files[0];
     loadImage(window.URL.createObjectURL(file), file.name);
@@ -41,7 +41,7 @@
     ev.preventDefault();
   }, false);
 
-  /* Image from Upload */
+  // Image from Upload 
   const imageFromUpload = (e) => {
     var file = e.target.files[0];
     loadImage(window.URL.createObjectURL(file), file.name);
