@@ -35,4 +35,29 @@ if (document.querySelector('#demo')) {
     loadImage('roundatlpdaunity.png');
     ev.preventDefault();
   })
+  let codelink = document.createElement('a');
+  codelink.href = 'https://github.com/codepo8/programmed-in-pencil-canvas-presentation/blob/master/' + current.replace('.html','.js');
+  codelink.className = 'codelink';
+  codelink.innerText = 'Check code on GitHub';
+  document.querySelector('#container').appendChild(codelink);
+  let codeblock = document.createElement('pre');
+  codeblock.className = 'code';
+  document.querySelector('#container').appendChild(codeblock);
+  fetch(current.replace('.html','.js'))
+    .then(response => response.text())
+    .then(data => {
+      out = '';
+      let lines = data.split("\n");
+      lines.forEach(l => {
+        l = l.replace(/</g,'&lt;');
+        if(l.indexOf('//') === -1) {
+          l = l + "\n";
+        } else {
+          l = `<span>${l}</span>`+"\n";
+        }
+        out += l;
+      })
+      codeblock.innerHTML = out;
+    })
 }
+  
