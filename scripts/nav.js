@@ -32,7 +32,7 @@ ul.innerHTML = out;
 document.body.appendChild(nav);
 if (document.querySelector('#demo')) {
   document.querySelector('#demo').addEventListener('click',(ev) => {
-    loadImage('../roundatlpdaunity.png');
+    loadImage('roundatlpdaunity.png');
     ev.preventDefault();
   })
 }
