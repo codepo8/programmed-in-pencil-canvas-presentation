@@ -1,0 +1,160 @@
+html, body {
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccc;
+    background:#333;
+  }
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: right;
+  font-weight: normal;
+}
+p {
+  text-align: right;
+}
+#container {
+  height: 100%;
+  padding: 0 20px 20px 50px;
+  display: block;
+  color: #ccc;
+  background:#333;
+}
+label {
+  display: inline-block;
+  padding: 5px 10px;
+  background: slategray;
+}
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+  background-color: green;
+  display: block;
+}
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
+}  
+output {
+  display: block;
+  padding: 5px 10px;
+}
+#colourslist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#colourslist span {
+  border: 1px solid #000;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#colourslist li {
+  position: relative;
+  display: inline-block;
+  min-width: 5em;
+  padding-left: 20px;
+  line-height: 15px;
+}
+canvas.analyse {
+  float: left;
+  margin-right: 10px;
+}
+#output {
+  position: absolute;
+  top: 1em;
+  left: 3em;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #000;
+}
+canvas.zoominteractive {
+  position: absolute;
+  top: 1em;
+  left: 3em;
+  width: 90px;
+  height: 90px;
+  border: 1px solid #fff;
+}
+p button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: -170px;
+  width: 200px;
+  background: slategray;
+  transition: 400ms;
+  border-bottom-right-radius: 10px;
+  border: 2px solid #333;
+}
+.navopen nav {
+  left: 0;
+  transition: 400ms;
+}
+nav button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background:transparent;
+  color: #000;
+}
+nav ul {
+  margin: .5em;
+  padding: 0;
+  margin-right: 2em;
+}
+nav ul li {
+  list-style: none;
+  padding-bottom: .2em;
+  line-height: 1.2;
+}
+nav ul a {
+  text-decoration: none;
+  color: #333;
+  padding: 2px 5px;
+  display: block;
+}
+nav ul a:hover, nav strong {
+  font-weight: normal;
+  color:#fff;
+  background: #333;
+  padding: 2px 5px;
+  display: block;
+}
+
+.copy {
+  text-align: left;
+  padding-bottom: .5em;
+  line-height: 1.3;
+}
+.copy a {
+  color: white;
+}
+.copy li {
+  padding-bottom: .5em;
+  line-height: 1.3;
+}
