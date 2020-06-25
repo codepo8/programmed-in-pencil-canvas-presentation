@@ -160,7 +160,6 @@ nav ul a:hover, nav strong {
 }
 pre {
   padding: 10px;
-  background: #000;
   clear: both;
 }
 pre::before{
@@ -168,9 +167,6 @@ pre::before{
   display: block;
   font-size: 2em;
   margin-bottom: .5em;
-}
-pre span {
-  color: lime;
 }
 a.codelink {
   clear: both;

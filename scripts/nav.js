@@ -41,23 +41,26 @@ if (document.querySelector('#demo')) {
   codelink.innerText = 'Check code on GitHub';
   document.querySelector('#container').appendChild(codelink);
   let codeblock = document.createElement('pre');
-  codeblock.className = 'code';
+//  codeblock.className = 'code';
   document.querySelector('#container').appendChild(codeblock);
   fetch(current.replace('.html','.js'))
     .then(response => response.text())
     .then(data => {
-      out = '';
-      let lines = data.split("\n");
-      lines.forEach(l => {
-        l = l.replace(/</g,'&lt;');
-        if(l.indexOf('//') === -1) {
-          l = l + "\n";
-        } else {
-          l = `<span>${l}</span>`+"\n";
-        }
-        out += l;
-      })
-      codeblock.innerHTML = out;
+      // out = '';
+      // let lines = data.split("\n");
+      // lines.forEach(l => {
+      //   l = l.replace(/</g,'&lt;');
+      //   if(l.indexOf('//') === -1) {
+      //     l = l + "\n";
+      //   } else {
+      //     l = `<span>${l}</span>`+"\n";
+      //   }
+      //   out += l;
+      // })
+      codeblock.innerHTML = '<code class="javascript">'+data.replace(/</g,'&lt;')+'</code>';
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
     })
 }
   
