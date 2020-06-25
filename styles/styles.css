@@ -175,6 +175,6 @@ pre span {
 a.codelink {
   clear: both;
   color: #fff;
-  display: inline-block;
+  display: block;
   margin: 1em 0 0 0;
 }
